@@ -1,0 +1,20 @@
+package io.trading.platform.domain.enums;
+
+public enum OrderStatus {
+  NEW,
+  PARTIALLY_FILLED,
+  FILLED,
+  DONE_FOR_DAY,
+  CANCELED,
+  EXPIRED,
+  REPLACED,
+  PENDING_CANCEL,
+  PENDING_REPLACE,
+  ACCEPTED,
+  PENDING_NEW,
+  ACCEPTED_FOR_BIDDING,
+  STOPPED,
+  REJECTED,
+  SUSPENDED,
+  CALCULATED
+}
