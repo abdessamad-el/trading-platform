@@ -1,10 +1,10 @@
 package io.trading.platform.persistence.entity;
 
 
-import io.trading.platform.persistence.enums.OrderSide;
-import io.trading.platform.persistence.enums.OrderStatus;
-import io.trading.platform.persistence.enums.OrderType;
-import io.trading.platform.persistence.enums.TimeInForce;
+import io.trading.platform.domain.enums.OrderSide;
+import io.trading.platform.domain.enums.OrderStatus;
+import io.trading.platform.domain.enums.OrderType;
+import io.trading.platform.domain.enums.TimeInForce;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -21,7 +21,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.UUID;
@@ -54,8 +53,8 @@ public class Order {
   @Enumerated(EnumType.STRING)
   private OrderType type;
 
-  private BigDecimal qty;
-  private BigDecimal limitPrice;
+  private String qty;
+  private String limitPrice;
 
   @Enumerated(EnumType.STRING)
   private TimeInForce timeInForce;

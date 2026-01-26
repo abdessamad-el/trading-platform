@@ -1,6 +1,8 @@
 package io.trading.platform.persistence.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import io.trading.platform.domain.enums.AssetClass;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -12,7 +14,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import net.jacobpeterson.alpaca.openapi.trader.model.AssetClass;
+
 
 import java.util.List;
 
@@ -36,6 +38,7 @@ public class Instrument {
   private boolean active;
 
   @OneToMany(mappedBy = "instrument")
+  @JsonIgnore
   List<Order> orders;
 
 }

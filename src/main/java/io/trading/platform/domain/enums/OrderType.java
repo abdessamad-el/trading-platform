@@ -1,4 +1,4 @@
-package io.trading.platform.persistence.enums;
+package io.trading.platform.domain.enums;
 
 
 public enum OrderType {

@@ -1,6 +1,7 @@
 package io.trading.platform.persistence.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -36,6 +37,7 @@ public class Account {
   private OffsetDateTime createdDate;
 
   @OneToMany(mappedBy = "account")
+  @JsonIgnore
   private List<Order> orders;
 
 }

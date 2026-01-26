@@ -1,6 +1,7 @@
 package io.trading.platform.persistence.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -33,6 +34,7 @@ public class Fill {
 
   @ManyToOne
   @JoinColumn(name = "order_id")
+  @JsonIgnore
   private Order order;
 
   private String providerTradeId;
