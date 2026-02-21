@@ -12,4 +12,6 @@ import org.springframework.stereotype.Component;
 public class KafkaTopicsProperties {
 	private String marketQuotes = "market.quotes.v1";
 	private String marketMinuteBars = "market.bars.minute.v1";
+	private String orderUpdates = "trading.order_updates.v1";
+	private String fills = "trading.fills.v1";
 }
